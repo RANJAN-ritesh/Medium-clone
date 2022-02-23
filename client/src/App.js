@@ -4,6 +4,7 @@ import { Navbar } from './components/navbar/Navbar';
 import { Home } from './pages/home/Home';
 import { About } from './pages/about/About';
 import { Counter } from './components/Counter/Counter';
+import { SignIn } from './pages/signup/signin';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/counter" element={<Counter/>}/>
-      {/* <Route path="/signin" element={<SignIn/>}/> */}
+      <Route path="/signin" element={<SignIn/>}/>
     </Routes>
     </div>
   );
