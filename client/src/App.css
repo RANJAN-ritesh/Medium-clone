@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+#feed{
+  margin-left: 5rem;
+  /* border:1px solid black; */
+  display:flex;
+  width:50rem;
+  vertical-align: middle;
+  padding: 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#feed_left{
+  width: 70%;
+  margin-top: 0.2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#feed_right{
+  width: 28%;
+  height: 95%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#feed_right>img{
+  width:12rem;
+  height: 8rem;
+  margin: 0.5rem;
+  padding:0rem 1rem;
+  margin-left: -0.6rem;
+}
+#feed_top{
+  font-size: 14px;
+  font-weight: 600;
+}
+#feed_top_span{
+  color:#7b878b;
+}
+#feed_top{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#feed_top>img{
+  width:40px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: -8px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#feed_top>p{
+  margin-left: 1rem;
+  margin-top: -1px;
+}
+#feed_bottom{
+  display: flex;
+  flex-direction: row;
+  margin-top: -1rem;
+}
+#feed_bottom>div>p{
+  color: #7b878b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  
+}
+#feed_bottom>div>p:nth-child(2){
+  margin-left: 15px;
+}
+#feed_middle>p{
+  margin-top: -10px;
+  color: #7b878b;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+}
+#feed_middle>h2{
+  color: #292929;
+}
+#time{
+  width:200px;
+}
+#feed_middle{
+  margin-top: -15px;
+}
+#time{
+  display: flex;
+}
+#bookmark{
+margin-left: 21rem;
+margin-top: 0.5rem;
 }
