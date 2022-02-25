@@ -1,4 +1,4 @@
-import { INC,DEC } from "./actionType";
+import { INC,DEC } from "../actionType";
 
 const init = {
     count:0

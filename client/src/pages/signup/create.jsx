@@ -11,21 +11,22 @@ import "./signin.css";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
-export const SignIn = () => {
+export const Create = () => {
   const [show, setShow] = useState(true);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleClose = () => {
     setShow(false);
-    navigate("/");
+    handleTimeout();
   };
 
-  // const handleTimeout = () => {
-  //   const timeOut = setTimeout(() => {
-  //     setShow(true);
-  //   }, 1000);
-  //   clearTimeout(timeOut);
-  // };
+  const handleTimeout = () => {
+    const timeOut = setTimeout(() => {
+      setShow(true);
+    }, 1000);
+    clearTimeout(timeOut);
+  };
 
   const googleLogin = async () => {
     setShow(false);
@@ -51,6 +52,7 @@ export const SignIn = () => {
         window.location.reload();
       });
   };
+
   const facebookLogin = () => {
     setShow(false);
     auth
@@ -69,7 +71,7 @@ export const SignIn = () => {
         });
         navigate("/");
       })
-      .catch((err) =>{
+      .catch((err) => {
         console.log(err.message);
         window.location.reload();
       });
@@ -84,49 +86,37 @@ export const SignIn = () => {
         <Modal.Header closeButton> </Modal.Header>
         <Modal.Body>
           <div className="main">
-            <h2>Welecome back</h2>
+            <h2>Join Medium.</h2>
             <div>
               <button onClick={googleLogin} className="signInBtn">
                 {" "}
                 <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" />
-                Login with google{" "}
+                Sign up with google{" "}
               </button>
               <br />
               <button onClick={facebookLogin} className="signInBtn">
                 {" "}
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" />
-                Login with facebook{" "}
-              </button>
-              <br />
-              <button className="signInBtn">
-                {" "}
-                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" />
-                Login with apple{" "}
-              </button>
-              <br />
-              <button className="signInBtn">
-                {" "}
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
-                Login with twitter{" "}
+                Sign up with facebook{" "}
               </button>
               <br />
               <button className="signInBtn">
                 {" "}
                 <img src="https://cdn-icons.flaticon.com/png/512/2549/premium/2549872.png?token=exp=1645807581~hmac=bc792696e62b08ceab4f2d923a755565" />
-                Sign in with Email{" "}
+                Sign up with Email{" "}
               </button>
             </div>
 
             <h6>
-              No account ?{" "}
+              Already have an account ?{" "}
               <span>
-                <Link to="/create" className="create">
-                  Create one
+                <Link to="/signin" className="create">
+                  Sign in
                 </Link>
               </span>
             </h6>
             <p className="para">
-              Click “Sign In” to agree to Medium’s{" "}
+              Click “Sign Up” to agree to Medium’s{" "}
               <span className="underline">Terms of Service</span> and
               acknowledge that Medium’s{" "}
               <span className="underline">Privacy Policy</span> applies to you.
@@ -137,32 +127,3 @@ export const SignIn = () => {
     </>
   );
 };
-
-// export const SignIn = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-
-//   const googleLogin = async () => {
-//     auth
-//       .signInWithPopup(googleAuthProvider)
-//       .then(async (result) => {
-//         const { user } = result;
-//         const { token, claims } = await user.getIdTokenResult();
-//         const { name, picture } = claims;
-//         dispatch({
-//           type: LOGGED_IN_USER,
-//           payload: {
-//             email: user.email,
-//             name,
-//             picture,
-//             token,
-//           },
-//         });
-//         navigate("/about");
-//       })
-//       .catch((err) => console.log(err.message));
-//   };
-//   return (
-//    <button>login with</button>
-//   );
-// };

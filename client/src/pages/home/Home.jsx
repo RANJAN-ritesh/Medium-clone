@@ -6,6 +6,6 @@ export const Home = () =>{
         Welcome to homepage
         <hr />
         <Link to="/counter">show counter</Link>
-        <button onClick={()=> navigate("/counter")}>Show Counter</button>
+        {/* <button onClick={()=> navigate("/counter")}>Show Counter</button> */}
     </div>
 }

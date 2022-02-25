@@ -1,6 +1,13 @@
 .navbar{
     margin: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-bottom: 50px;
+}
+
+.img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
 }
