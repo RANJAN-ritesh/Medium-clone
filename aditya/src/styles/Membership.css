@@ -1,0 +1,234 @@
+
+
+
+
+
+.Memcop{
+    font-family: 'Gt super text book', Georgia, sans-serif;
+    color: white;
+
+}
+.Memcop1{
+    background-color: #4479ff;
+    padding: 100px;
+    /* color: white; */
+   
+}
+
+
+.Memcop1 > h2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 7.3vw;
+    font-weight: 400;
+    font-family: 'Gt super text book', Georgia, sans-serif;
+}
+
+.Memcop1 > h4{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+
+.Memcop1-btn{
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    height: 50px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    border-radius: 21px;
+    padding-top: 10px;
+    text-align: center;
+    color: black;
+    border:  none;
+    font-weight: 400;
+}
+.Memcop1-btn:hover{
+  background-color: #4479ff;
+  color: white;
+  border: 1px solid white;
+}
+
+.Memcop2{
+    border-color:white ;    
+    background-color: #4479ff;
+    border:1px solid  white;
+    padding: 50px;
+    vertical-align: top;
+    font-size: 3.2vw;
+    font-weight: 400;
+    letter-spacing: -0.1;
+    text-align: left;
+   
+}
+#bdr{
+    border-right:1px solid white;
+}
+.Memcop2R{
+    display: inline-block;
+    vertical-align: top;
+    width: 47.1%;
+    height: auto;
+    font-weight: 400;
+    /* letter-spacing: -0.12vw; */
+    padding-left: 40px;
+}
+.Memcop2R>h2{
+    font-size: 3.0vw;
+    
+}
+
+.Memcop2R>p{
+    font-size: 18px;
+}
+
+.Memcop2R-img{
+    /* border: 1px solid yellow; */
+    width: 260px;
+    height: 135px;
+    vertical-align: top;
+}
+
+
+.Memcop3{
+    width: 100%;
+    height: 350px;
+    background-color: #ffff;
+    border: 1px solid teal;
+}
+.Memcop3A{
+    margin: auto;
+    width: 60%;
+    /* border: 1px solid red; */
+    height: 250px;
+    margin-top: 50px;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.Memcop3B{
+    height: 150px;
+    display: inline-block;
+}
+.Memcop3C{
+    height: 150px;
+    vertical-align: top;
+    display: inline-block;   
+    color: black;
+   padding-left: 0px;
+}
+
+.Memcop3C > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#ovel{
+    width: 50px;
+    vertical-align: top;
+    height: 150px;
+    background: red;
+    border-radius: 50% ;
+    display: inline-block;
+    margin-left: 10px;
+}
+#ovell{
+    width: 25px;
+    height: 150px;
+    vertical-align: top;
+    background: yellow;
+    border-radius: 50% ;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#Memcop3txt{
+    display: inline-block;
+    height: 200px;
+    /* border: 1px solid red; */
+    margin-left: 50px;
+    width: 400px;
+    text-align: left;
+    font-family: 'Soehne web buch', sans-serif;
+}
+#name{
+    margin-top: 40px;
+}
+
+.Memcop4{
+    width: 100%;
+    height: 500px;
+    background-color:#bcdfff ;
+    border: 1px solid teal;
+}
+.Memcop4>p{
+     font-size: 120px;
+     line-height: 110px; 
+     color: black; 
+     margin-top: 20px;
+     margin-bottom: 40px;
+
+    
+}
+.Memcop4>button{
+    margin-top: -80px;
+}
+.Memcop4>img{
+    margin-top: -30px;
+    
+}
+
+.Memcop5{
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: rgb(80, 73, 65); */
+    border: 1px solid teal;
+    vertical-align: center;
+    color: black;
+    background-color: white;
+}
+
+.Memcop5Img{
+    /* border: 1px solid red; */
+    width: 300px;
+    height: 50px;
+    display: inline-block;
+    /* padding: 40px; */
+    /* margin: 0%; */
+    margin-left: -100px;
+    margin-top: 10px;
+}
+
+.Memcop5Img>img{
+    height: 100%;
+    width: 100%;
+    /* margin-left: 0%; */
+}
+
+.MemcopFtH{
+    display: inline-block;
+    /* border: 1px solid red; */
+    vertical-align: top;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.MemcopFtLi{
+    display: inline-block;
+    /* border: 1px solid red; */
+    vertical-align: top;
+    margin-left: 250px;
+    margin-top: 20px;
+    font-size: 12px;  
+
+}
+
+Link{
+    font-size: 12px;
+    /* color: black; */
+    text-decoration: none;
+}
