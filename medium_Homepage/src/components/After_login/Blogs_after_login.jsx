@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
-import { IndividualPage, Like } from "../redux/action";
+import { IndividualPage, Like, Saveitems } from "../../redux/action";
+import { Navbar_login } from "./navbar_after_login";
+import { RightsideLogin } from "./rightside_after_login";
 
-export const Blogs = ()=>{
+export const Blogs_after_login = ()=>{
   let [data,setData] = useState([])
   let dispatch = useDispatch()
   
@@ -15,7 +17,10 @@ export const Blogs = ()=>{
       .then(res=>res.json())
       .then(res=>{
           // console.log(res)
+          
           setData(res)
+          const action = Saveitems(res)
+          dispatch(action)
       })
     }
 
@@ -32,39 +37,48 @@ export const Blogs = ()=>{
     }
   
     return(
+      <div className="parent">
+        <Navbar_login/>
         <div onLoad={GetData}>
           {
             data.map((e)=>{
               return(
-                <div id="feed">
-                <div id="feed_left">
-                    <div id="feed_top">
+                <div className="feed_after_login">
+                <div className="feed_left">
+                    <div className="feed_top">
                        <img src={e.profile_url}/>
-                      <p>{e.author}<span id="feed_top_span"></span>{e.source.name ? " in " + e.source.name : "" }</p>
+                      <p>{e.author}<span className="feed_top_span"></span>{e.source.name ? " in " + e.source.name : "" }</p>
+                      <p id="date_after_login">{(e.date)}</p>
                     </div>
-                    <div id="feed_middle" onClick={ ()=> IndividualClick(e.id)}>
+                    <div className="feed_middle" onClick={ ()=> IndividualClick(e.id)}>
                        <h2>{e.title}</h2>
                        <p>{e.description}</p>
                     </div>
-                    <div id="feed_bottom">
-                    <div id="time">
-                       <p>{(e.date)}</p>
+                    <div className="feed_bottom">
+                    <div className="time">
+                       
                        <p>{e.reading_time} </p>
+                       <p className="theTag">{e.tag}</p>
+                       
                        </div>
-                       <div id="bookmark" onClick={()=>BookmarkClick(e.id)}>
+                       <div className="bookmark" onClick={()=>BookmarkClick(e.id)}>
                        <img src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/22/000000/external-bookmark-ui-essential-kmg-design-basic-outline-kmg-design.png"/>
                        </div>
                     </div>
+                    {/* <hr id="hr_line_1"></hr> */}
                 </div>
-                <div id="feed_right" >
+                <div className="feed_right" >
                 <img src={e.urlToImage}/>
+                {/* <hr id="hr_line_2"></hr> */}
                 </div>
+                
                 </div>
                 )
               
             })
           }
         </div>
-     
+        <RightsideLogin/>
+        </div>
     )
 }

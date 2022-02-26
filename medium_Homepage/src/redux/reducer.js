@@ -1,8 +1,10 @@
-import { INDIVIDUAL_PAGE, LIKE } from "./actionTypes";
+import { INDIVIDUAL_PAGE, LIKE, SAVE_ITEMS, SEARCH_TAG } from "./actionTypes";
 
 const initstate = {
+allelements:[],
 likes:[],
-Individual_data:[]
+Individual_data:[],
+Search_tag:[]
 };
 
 export const reducer = (state = initstate , {type,payload})=>{
@@ -19,7 +21,7 @@ export const reducer = (state = initstate , {type,payload})=>{
                 Individual_data:[payload]
             }
         }
-      
+        
         default:
             return state;
     }
