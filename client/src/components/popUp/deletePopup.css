@@ -1,0 +1,35 @@
+/* .parentDiv{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    height: 550px;
+    width: 720px;
+    padding: 18px 18px 18px 18px;
+    box-shadow: rgba(0,0,0,0.15)0px 2px 10px 0px;
+   vertical-align: middle;
+} */
+.contain p{
+    
+    font-size: 18px;
+}
+
+#cancelBtn{
+ height: 38px;   
+ width: 76px;
+ color: black;
+ background-color: #ffffff;
+ border: 1px solid black;
+ border-radius: 20px;
+ font-size: 16px;
+}
+
+#deleteBtn{
+    height: 38px;   
+    width: 76px;
+    color: #ffffff;
+    border: 1px solid #ab4141;
+    background-color: #ab4141;
+    border-radius: 20px;
+    margin-left: 20px;
+ font-size: 16px;
+    
+}

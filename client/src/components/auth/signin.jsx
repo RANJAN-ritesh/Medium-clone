@@ -11,21 +11,13 @@ import "./signin.css";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
-export const Create = () => {
+export const SignIn = () => {
   const [show, setShow] = useState(true);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const handleClose = () => {
     setShow(false);
-    handleTimeout();
-  };
-
-  const handleTimeout = () => {
-    const timeOut = setTimeout(() => {
-      setShow(true);
-    }, 1000);
-    clearTimeout(timeOut);
+    navigate("/");
   };
 
   const googleLogin = async () => {
@@ -45,14 +37,13 @@ export const Create = () => {
             token,
           },
         });
-        navigate("/");
+        navigate("/loggedIn");
       })
       .catch((err) => {
         console.log(err.message);
         window.location.reload();
       });
   };
-
   const facebookLogin = () => {
     setShow(false);
     auth
@@ -69,9 +60,9 @@ export const Create = () => {
             token,
           },
         });
-        navigate("/");
+        navigate("/loggedIn");
       })
-      .catch((err) => {
+      .catch((err) =>{
         console.log(err.message);
         window.location.reload();
       });
@@ -86,37 +77,49 @@ export const Create = () => {
         <Modal.Header closeButton> </Modal.Header>
         <Modal.Body>
           <div className="main">
-            <h2>Join Medium.</h2>
+            <h2>Welecome back</h2>
             <div>
               <button onClick={googleLogin} className="signInBtn">
                 {" "}
                 <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" />
-                Sign up with google{" "}
+                Login with google{" "}
               </button>
               <br />
               <button onClick={facebookLogin} className="signInBtn">
                 {" "}
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" />
-                Sign up with facebook{" "}
+                Login with facebook{" "}
+              </button>
+              <br />
+              <button className="signInBtn">
+                {" "}
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" />
+                Login with apple{" "}
+              </button>
+              <br />
+              <button className="signInBtn">
+                {" "}
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
+                Login with twitter{" "}
               </button>
               <br />
               <button className="signInBtn">
                 {" "}
                 <img src="https://cdn-icons.flaticon.com/png/512/2549/premium/2549872.png?token=exp=1645807581~hmac=bc792696e62b08ceab4f2d923a755565" />
-                Sign up with Email{" "}
+                Sign in with Email{" "}
               </button>
             </div>
 
             <h6>
-              Already have an account ?{" "}
+              No account ?{" "}
               <span>
-                <Link to="/signin" className="create">
-                  Sign in
+                <Link to="/create" className="create">
+                  Create one
                 </Link>
               </span>
             </h6>
             <p className="para">
-              Click “Sign Up” to agree to Medium’s{" "}
+              Click “Sign In” to agree to Medium’s{" "}
               <span className="underline">Terms of Service</span> and
               acknowledge that Medium’s{" "}
               <span className="underline">Privacy Policy</span> applies to you.
@@ -127,3 +130,5 @@ export const Create = () => {
     </>
   );
 };
+
+

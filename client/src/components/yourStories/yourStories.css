@@ -1,0 +1,74 @@
+.container{
+    display: flex;
+    text-align: center;
+}
+.leftDiv{
+    width: 79px;
+    margin-left: -9%;
+}
+.middleDiv{
+    margin-top: 40px;
+    width: 1030px;
+    text-align: center;
+}
+.rightDiv{
+    width: 500px;
+    /* margin-left: 73rem; */
+    height: 100%;
+}
+.topDiv{
+    display: flex;
+    width: 692px;
+    margin: auto;
+    text-align: left;
+    font-size: 42px;
+    font-weight: 750;
+}
+.btnDiv{
+    margin-left: 27%;
+}
+.firstBtn{
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #0f730c;
+    height: 38px;
+    width: 130.35px;
+    border: 1px solid #0f730c;
+    padding: 7px 16px 9px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+}
+.secondBtn{
+    font-size: 14px;
+    line-height: 20px;
+    background-color: white;
+    height: 38px;
+    width: 130px;
+    border: 1px solid black;
+    padding: 7px 16px 9px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: black;
+}
+.linkDiv{
+    display: flex;
+    width: 692px;
+    margin: auto;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px 0;
+}
+.linkDiv div{
+    margin-right: 25px;
+}
+.changingDiv{
+    border-top: 1px solid #D8D2CB;
+    width: 692px;
+    margin: auto;
+}
+
+#twitterBtn{
+width: 220px;
+text-decoration: none;
+}
